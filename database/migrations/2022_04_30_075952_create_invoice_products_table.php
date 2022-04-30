@@ -15,7 +15,6 @@ class CreateInvoiceProductsTable extends Migration
     {
         Schema::create('invoice_products', function (Blueprint $table) {
             $table->id();
-            $table->integer('invoice_id');
             $table->string('name');
             $table->integer('quantity');
             $table->decimal('price',10,2);
