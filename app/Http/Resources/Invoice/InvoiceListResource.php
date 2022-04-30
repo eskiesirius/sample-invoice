@@ -17,7 +17,7 @@ class InvoiceListResource extends JsonResource
         return  [
             'id'                => $this->id,
             'invoice_number'    => $this->invoice_number,
-            'date'              => $this->date->format('y-m-d'),
+            'date'              => $this->date->format('Y-m-d'),
             'customer_name'     => $this->customer_name,
             'total_amount'      => $this->products()->sum('price'),
         ];
