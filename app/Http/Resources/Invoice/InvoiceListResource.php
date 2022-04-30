@@ -19,7 +19,7 @@ class InvoiceListResource extends JsonResource
             'invoice_number'    => $this->invoice_number,
             'date'              => $this->date->format('Y-m-d'),
             'customer_name'     => $this->customer_name,
-            'total_amount'      => $this->products()->sum('price'),
+            'total_amount'      => number_format($this->products()->sum('price'),2),
         ];
     }
 }

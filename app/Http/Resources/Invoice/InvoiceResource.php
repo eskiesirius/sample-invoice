@@ -22,7 +22,7 @@ class InvoiceResource extends JsonResource
             'product_name'      => $this->products()->pluck('name')->toArray(),
             'product_quantity'  => $this->products()->pluck('quantity')->toArray(),
             'product_price'     => $this->products()->pluck('price')->toArray(),
-            'total_amount'      => $this->products()->sum('price'),
+            'total_amount'      => number_format($this->products()->sum('price'),2),
         ];
     }
 }
